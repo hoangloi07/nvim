@@ -8,3 +8,4 @@ map('n', '<leader><S-Tab>', ':tabprevious<CR>', opts)
 -- Terminal mode: Esc returns to normal mode
 map('t', '<Esc>', "<C-\\><C-n>", opts)
 
+
