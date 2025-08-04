@@ -5,7 +5,7 @@ local modules = {
   "config.maps",
   "config.lsp",
   "config.lazy",
-  "config.statusline",
+  "config.statuslineEVA",
   "config.tabline",
 }
 
