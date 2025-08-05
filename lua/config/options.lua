@@ -60,5 +60,5 @@ opt.breakindent = true
 -- opt.laststatus = 1
 
 vim.cmd [[set nohlsearch]]
+vim.opt.fillchars:append({ eob = " " })
 -- opt.formatoptions:remove({ "c", "r", "o" })  -- no automatic comment wrapping :contentReference[oaicite:3]{index=3}
-
