@@ -6,6 +6,7 @@ return {
         "--completion-style=detailed",
     },
     filetypes = {
-        "c", "cpp"
-    }
+        "c",
+        "cpp",
+    },
 }

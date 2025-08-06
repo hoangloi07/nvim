@@ -43,22 +43,21 @@ opt.mouse = "a"
 -- Whitespace visualization
 opt.list = true
 opt.listchars = {
-  tab        = "→ ",
-  trail      = "·",
-  space      = "·",
-  -- extends  = "⟩",
-  -- precedes = "⟨",
+    tab = "→ ",
+    trail = "·",
+    space = "·",
 }
 
 -- -- Message behavior
 -- opt.shortmess:append({ I = true })
 -- opt.lazyredraw = true
 
-
 opt.linebreak = true
 opt.breakindent = true
 -- opt.laststatus = 1
 
-vim.cmd [[set nohlsearch]]
-vim.opt.fillchars:append({ eob = " " })
+vim.cmd([[set nohlsearch]])
+opt.fillchars:append { eob = " " }
+
+opt.cmdheight = 0
 -- opt.formatoptions:remove({ "c", "r", "o" })  -- no automatic comment wrapping :contentReference[oaicite:3]{index=3}
