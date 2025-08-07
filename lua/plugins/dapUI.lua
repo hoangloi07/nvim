@@ -16,7 +16,7 @@ return {
             dapui.close()
         end
         require("dapui").setup()
-        vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "", linehl = "", numhl = "" })
-        vim.keymap.set("n", "<f11>", ":lua require('dapui').open()<CR>")
+        -- vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "", linehl = "", numhl = "" })
+        vim.keymap.set("n", "<f11>", ":lua require('dapui').toggle()<CR>")
     end,
 }

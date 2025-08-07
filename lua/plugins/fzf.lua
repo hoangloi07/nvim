@@ -11,5 +11,10 @@ return {
         vim.api.nvim_set_keymap("n", "<leader>fl", ":FzfLua lines<CR>", { noremap = true, silent = true })
         vim.api.nvim_set_keymap("n", "<leader>fw", ":FzfLua live_grep<CR>", { noremap = true, silent = true })
         vim.api.nvim_set_keymap("n", "<leader>fp", ":FzfLua grep_project<CR>", { noremap = true, silent = true })
+        require('fzf-lua').setup({
+            winopts = {
+                backdrop = 100
+            }
+        })
     end,
 }

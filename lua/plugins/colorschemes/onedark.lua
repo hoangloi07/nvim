@@ -6,6 +6,6 @@ return {
             style = "warmer",
         }
         -- Enable theme
-        require("onedark").load()
+        -- require("onedark").load()
     end,
 }
