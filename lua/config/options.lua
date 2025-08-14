@@ -60,4 +60,12 @@ vim.cmd([[set nohlsearch]])
 opt.fillchars:append { eob = " " }
 
 opt.cmdheight = 0
+opt.shell = "fish"
 -- opt.formatoptions:remove({ "c", "r", "o" })  -- no automatic comment wrapping :contentReference[oaicite:3]{index=3}
+
+vim.filetype.add({
+  extension = {
+    ["df"] = "javascript", -- uses JS grammar for highlighting
+  },
+})
+

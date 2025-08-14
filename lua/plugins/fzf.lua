@@ -1,5 +1,6 @@
 return {
     "ibhagwan/fzf-lua",
+    pin = true,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         vim.api.nvim_set_keymap("n", "<leader>ff", ":FzfLua files<CR>", { noremap = true, silent = true })
