@@ -136,6 +136,10 @@ local function vcs()
     }
 end
 
+local function battery()
+    return " " .. string.format(require('battery').get_status_line()) .. "% "
+end
+
 Statusline = {}
 
 Statusline.active = function()
@@ -151,6 +155,7 @@ Statusline.active = function()
         "%=%#StatusLineExtra#",
         vcs(),
         lineinfo(),
+        battery(),
     }
 end
 
