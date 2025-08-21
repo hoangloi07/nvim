@@ -1,7 +1,7 @@
 # Neovim configuration 
 
 
-lua/plugins/
+lua/plugins/ <br>
 ├── aglin.lua <br>
 ├── autopairs.lua <br>
 ├── battery.lua <br>
