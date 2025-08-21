@@ -17,7 +17,7 @@ function M.render()
             if vim.fn.buflisted(buf) == 1 then
                 local n = vim.fn.bufname(buf)
                 if n == "" then
-                    n = "[Scratch]"
+                    n = "[None]"
                 end
                 table.insert(names, vim.fn.fnamemodify(n, ":t"))
             end
@@ -27,10 +27,7 @@ function M.render()
     local hl_str = function(hl, str)
         return "%#" .. hl .. "#" .. str .. "%*"
     end
-    local get_current_time = function()
-        return os.date("%d.%m.%Y")
-    end
-    return hl_str("TabLineFill", "   ") .. table.concat(out) .. "%#TabLineFill#" .. "%=" .. get_current_time() .. " "
+    return hl_str("TabLineFill", "   ") .. "%#TabLineFill#" .. "%=" .. table.concat(out)
 end
 
 return M

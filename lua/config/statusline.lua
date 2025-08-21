@@ -137,7 +137,7 @@ local function vcs()
 end
 
 local function battery()
-    return " " .. string.format(require('battery').get_status_line()) .. "% "
+    return " " .. string.format(require("battery").get_status_line()) .. "% "
 end
 
 Statusline = {}

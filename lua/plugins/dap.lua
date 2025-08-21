@@ -46,7 +46,7 @@ return {
 
         local map = vim.keymap.set
         map("n", "<C-m>", ":DapToggleBreakpoint<CR>")
-        vim.cmd [[unmap <CR>]]
+        vim.cmd([[unmap <CR>]])
         map("n", "<f11>", ":DapNew<CR>")
     end,
 }

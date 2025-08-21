@@ -1,7 +1,7 @@
 return {
-    'cameron-wags/splash.nvim',
+    "cameron-wags/splash.nvim",
     config = function()
-        require('splash').setup({
+        require("splash").setup {
             text = {
                 [[          Lambda(/ˈlæmdə/; uppercase Λ, lowercase λ; Greek: λάμ(β)δα, lám(b)da)]],
                 [[             is  the eleventh letter  of  the Greek  alphabet,]],
@@ -13,8 +13,8 @@ return {
                 [[                  whereas in  Modern Greek it is  λάμδα (lámda, [ˈlamða]),]],
                 [[     while the spelling  λάμβδα (lámbda) was used (to varying degrees) throughout]],
                 [[                                             the lengthy  transition between the two.]],
-             },
-             -- text_width = 100
-        })
-    end
+            },
+            -- text_width = 100
+        }
+    end,
 }
