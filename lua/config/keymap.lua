@@ -8,3 +8,5 @@ map("n", "<leader>t", ":tabnew<CR>", opts)
 
 -- Terminal mode: Esc returns to normal mode
 map("t", "<Esc>", "<C-\\><C-n>", opts)
+
+map("n", "<leader>k", ":bd!<cr>", opts)

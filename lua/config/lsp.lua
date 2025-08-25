@@ -1,6 +1,6 @@
 -- lua/config/lsp.lua
 -- Enable native LSP for listed servers (files should exist in lsp/<name>.lua)
-vim.lsp.enable { "lua_ls", "clangd" }
+vim.lsp.enable { "lua_ls", "clangd", "typescript" }
 
 -- Global diagnostic settings
 vim.diagnostic.config {

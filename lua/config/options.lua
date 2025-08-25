@@ -63,8 +63,12 @@ opt.cmdheight = 0
 opt.shell = "zsh"
 -- opt.formatoptions:remove({ "c", "r", "o" })  -- no automatic comment wrapping :contentReference[oaicite:3]{index=3}
 
-vim.filetype.add {
-    extension = {
-        ["df"] = "javascript", -- uses JS grammar for highlighting
-    },
-}
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank {
+      higroup = "Visual", -- highlight group
+      timeout = 200,         -- time in ms
+    }
+  end,
+})
+
