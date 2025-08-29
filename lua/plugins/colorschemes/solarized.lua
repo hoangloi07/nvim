@@ -1,6 +1,12 @@
 return {
     "maxmx03/solarized.nvim",
     config = function()
-        vim.cmd [[ colorscheme solarized ]]
+        require("solarized").setup({
+            transparent = {
+              enabled = true,
+            },
+            variant = 'autumn'
+        })
+        vim.cmd([[ colorscheme solarized ]])
     end
 }

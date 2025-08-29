@@ -43,7 +43,8 @@ opt.mouse = "a"
 -- Whitespace visualization
 opt.list = true
 opt.listchars = {
-    tab = "→ ",
+    -- tab = "→ ",
+    tab = "  ",
     trail = "·",
     space = "·",
 }
@@ -60,15 +61,14 @@ vim.cmd([[set nohlsearch]])
 opt.fillchars:append { eob = " " }
 
 opt.cmdheight = 0
-opt.shell = "zsh"
+opt.shell = "fish"
 -- opt.formatoptions:remove({ "c", "r", "o" })  -- no automatic comment wrapping :contentReference[oaicite:3]{index=3}
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank {
-      higroup = "Visual", -- highlight group
-      timeout = 200,         -- time in ms
-    }
-  end,
+    callback = function()
+        vim.highlight.on_yank {
+            higroup = "Visual", -- highlight group
+            timeout = 200, -- time in ms
+        }
+    end,
 })
-

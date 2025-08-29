@@ -1,10 +1,10 @@
 -- lua/config/lsp.lua
 -- Enable native LSP for listed servers (files should exist in lsp/<name>.lua)
-vim.lsp.enable { "lua_ls", "clangd", "typescript" }
+vim.lsp.enable { "lua_ls", "clangd", "typescript", "gopls" }
 
 -- Global diagnostic settings
 vim.diagnostic.config {
-    virtual_text = true,
+    virtual_text = false,
     signs = true,
     underline = true,
     update_in_insert = false,
@@ -20,14 +20,12 @@ vim.diagnostic.config {
 vim.diagnostic.config {
     signs = {
         text = {
-            [vim.diagnostic.severity.ERROR] = "",
-            [vim.diagnostic.severity.WARN] = "",
-            [vim.diagnostic.severity.INFO] = "",
-            [vim.diagnostic.severity.HINT] = "󰌵",
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN] = "",
+            [vim.diagnostic.severity.INFO] = "",
+            [vim.diagnostic.severity.HINT] = "",
         },
     },
-    virtual_text = true,
-    underline = true,
     -- additional options as needed
 }
 
@@ -50,5 +48,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
         vim.keymap.set("n", "<leader><leader>e", vim.diagnostic.open_float, opts)
         vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
+
+        vim.diagnostic.config({
+            virtual_text = false,
+        }, ev.buf)
     end,
 })

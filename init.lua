@@ -9,7 +9,7 @@ local modules = {
     "config.lazy",
     "config.lsp",
     "config.statusline",
-    "config.tabline",
+    -- "config.tabline",
 }
 
 for _, mod in ipairs(modules) do

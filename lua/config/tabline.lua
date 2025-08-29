@@ -27,6 +27,7 @@ function M.render()
     local hl_str = function(hl, str)
         return "%#" .. hl .. "#" .. str .. "%*"
     end
+    -- 
     return hl_str("TabLineFill", "   ") .. "%#TabLineFill#" .. "%=" .. table.concat(out)
 end
 

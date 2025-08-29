@@ -1,5 +1,16 @@
 return {
-  'mrcjkb/rustaceanvim',
-  version = '^6', -- Recommended
-  lazy = false, -- This plugin is already lazy
+    "mrcjkb/rustaceanvim",
+    version = "^6", -- Recommended
+    lazy = false, -- This plugin is already lazy
+    config = function()
+        vim.g.rustaceanvim = {
+          server = {
+            on_attach = function(client, bufnr)
+              vim.diagnostic.config({
+                virtual_text = false,
+              }, bufnr)
+            end,
+          },
+        }
+    end
 }

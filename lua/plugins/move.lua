@@ -35,7 +35,7 @@ return {
         { "<C-S-k>", ":MoveBlock(-1)<CR>", mode = { "v" }, desc = "Move Block Down" },
         -- { "<A-left>", ":MoveHBlock(-1)<CR>", mode = { "v" }, desc = "Move Block Left" },
         -- { "<A-right>", ":MoveHBlock(1)<CR>", mode = { "v" }, desc = "Move Block Right" },
-        { "<C-S-h>", ":MoveBlock(-1)<CR>", mode = {"v"}, desc = "Move Block Left" },
-        { "<C-S-l>", ":MoveBlock(1)<CR>",  mode = {"v"}, desc = "Move Block Right" },
+        { "<C-S-h>", ":MoveBlock(-1)<CR>", mode = { "v" }, desc = "Move Block Left" },
+        { "<C-S-l>", ":MoveBlock(1)<CR>", mode = { "v" }, desc = "Move Block Right" },
     },
 }
